@@ -134,6 +134,20 @@ body.active {
     transform: rotate(180deg);
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
 .l-header {
     display: flex;
     justify-content: space-between;
@@ -145,6 +159,8 @@ body.active {
 
 .l-header h2 {
     color: var(--text-color-red);
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .l-nav__menu {
@@ -165,13 +181,30 @@ body.active {
     letter-spacing: 0.1rem;
 }
 
+.l-nav__menu a::after {
+    content: '';
+    width: 0%; /* não vai aparecer no início */
+    height: 2px;
+    background: var(--text-color-red);
+
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+
+    transition: width 0.2s; /* segredo para fazer crescer */
+}
+
+.l-nav__menu a:hover::after {
+    width: 100%; /* quando fizer o hover vai crescer em 100% */
+}
+
 @media (max-width: 768px) {
     .l-nav__container {
-        width: 20rem;
-        height: 100vh;
-        background: var(--body-color);
+        height: 100%;
+        width: 100%;
+        background: rgb(19, 18, 18);
         position: fixed;
-        top: 0;
+        top: -110%;
         right: 0;
         display: flex;
         flex-direction: column;
@@ -182,13 +215,21 @@ body.active {
         transition: var(--transition-general);
         z-index: 2;
     }
+
     .l-nav__container.show-menu {
         opacity: 1;
         visibility: visible;
+        top: 0;
     }
 
     .l-nav__menu {
         flex-direction: column;
+        gap: 6rem;
+    }
+
+    .l-nav__menu a {
+        position: relative;
+        font-size: 2rem;
     }
 }
 
