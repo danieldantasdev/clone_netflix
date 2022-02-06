@@ -147,31 +147,8 @@ body.active {
     color: var(--text-color-red);
 }
 
-.l-nav__container {
-    width: 20rem;
-    height: 100vh;
-    background: var(--body-color);
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition-general);
-    z-index: 2;
-}
-
-.l-nav__container.show-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
 .l-nav__menu {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -186,4 +163,37 @@ body.active {
 .l-nav__menu a:hover {
     filter: brightness(0.4);
     letter-spacing: 0.1rem;
+}
+
+@media (max-width: 768px) {
+    .l-nav__container {
+        width: 20rem;
+        height: 100vh;
+        background: var(--body-color);
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-general);
+        z-index: 2;
+    }
+    .l-nav__container.show-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .l-nav__menu {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 788px) {
+    #menu-btn {
+        display: none;
+    }
 }
