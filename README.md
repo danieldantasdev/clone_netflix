@@ -15,13 +15,11 @@ Recriando a Interface do Netflix" ofertado pela [DIO](https://digitalinnovation.
 
 ## Pré-requisitos
 
-- `Node.js`
 - `Git`
 
 ## Indicações
 
-- nvm
-- Execute `nvm use` para usar a versão Node recomendada para o projeto
+- Clone meu repositório e faça uma Fork
 
 ### Comandos
 
