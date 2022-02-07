@@ -4,13 +4,20 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS -->
         <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <!-- Swiper -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
         <title>Clone Netflix</title>
     </head>
     <body>
         <div class="l-container">
-            <header class="l-header">
+            <header class="l-header container">
                 <a href="#"> <h2>Netflix</h2></a>
 
                 <div class="l-header__icons">
@@ -28,7 +35,87 @@
                     </nav>
                 </aside>
             </header>
+
+            <main class="l-main">
+                <div class="l-section__banner">
+                    <div class="l-section__banner-about container">
+                        <h3>House of cards</h3>
+                        <p>
+                            Não pode impedir o político sem escúpulos Frank
+                            Underwood de conquistar Washigton
+                        </p>
+                        <div class="l-section__banner-button">
+                            <button class="c-button">
+                                Assitir agora
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="c-button">
+                                Mais informações
+                                <i class="fas fa-info"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="l-section__movies">
+                    <div class="l-section__movies-item swiper">
+                        <div class="l-section__movies-card swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Cursed.jpg" alt="" />
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </section>
+            </main>
         </div>
+        <!-- Swiper -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!-- JS -->
         <script src="assets/js/script.js"></script>
     </body>
 </html>

@@ -112,7 +112,49 @@ body.active {
     --text-color-light: #c3b6ee;
 }
 
-/* ========= Icons ========= */
+/* ==================== Componentes ==================== */
+.c-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--text-color-red);
+    color: var(--text-color-light);
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: capitalize;
+    transition: var(--transition-general);
+    animation: pulseHeart 1s reverse infinite;
+}
+
+.c-button:hover {
+    transform: translateY(-10px);
+    filter: brightness(0.5);
+}
+
+@keyframes pulseHeart {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ================== Container ================== */
+.container {
+    margin-left: 1rem;
+}
+
+/* ================== Header ================== */
 #menu-btn {
     position: fixed;
     top: 1rem;
@@ -134,27 +176,18 @@ body.active {
     transform: rotate(180deg);
 }
 
-header {
+.l-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: #fff;
-    padding: 1rem 7%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
     z-index: 1000;
-    box-shadow: var(--box-shadow);
-}
-
-.l-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
     font: 400 1.5rem var(--font-primary);
-    background: black;
+    box-shadow: var(--text-shadow);
 }
 
 .l-header h2 {
@@ -198,6 +231,88 @@ header {
     width: 100%; /* quando fizer o hover vai crescer em 100% */
 }
 
+/* ================== Main ================== */
+/* .l-main {
+    color: #04d361; 
+} */
+
+/* ======== Banner ======== */
+.l-section__banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+        url(../img/House\ of\ cards.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+}
+
+.l-section__banner-about {
+    color: var(--text-color-light);
+    font: 400 2rem 'Roboto', sans-serif;
+    width: 100%;
+    padding: 30rem 2rem;
+}
+
+.l-section__banner-about h3 {
+    font-size: 4rem;
+}
+
+.l-section__banner-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.l-section__banner-button i {
+    font-size: 1.7rem;
+}
+
+/* ======== Movies ======== */
+.l-section__movies {
+    position: relative;
+}
+
+.l-section__movies-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================== Swiper ==================== */
+.swiper,
+.swiper-wrapper {
+    position: relative;
+    max-width: 100%;
+}
+
+.swiper-slide {
+    height: auto;
+    padding: 4rem 1rem;
+    position: absolute;
+}
+
+.swiper-pagination-bullet {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    top: 1rem;
+    background: var(--text-color-red) !important;
+}
+
+.swiper-pagination {
+    width: 3rem;
+    height: 3rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--text-color-red) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-color-red) !important;
+}
+
+/* ================== Media queries ================== */
 @media (max-width: 768px) {
     .l-nav__container {
         height: 100%;
