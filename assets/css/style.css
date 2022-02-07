@@ -157,7 +157,7 @@ body.active {
 /* ================== Header ================== */
 #menu-btn {
     position: fixed;
-    top: 1rem;
+    top: 3rem;
     right: 2rem;
     color: var(--toggle-color);
     font-size: 3rem;
@@ -310,6 +310,45 @@ body.active {
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--text-color-red) !important;
+}
+
+/* ================== Footer ================== */
+.l-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: var(--toggle-color);
+}
+
+.l-footer p {
+    /* width: 50%; */
+    font: 400 1.5rem 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.l-footer span {
+    color: var(--text-color-green);
+}
+
+.l-footer__share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.l-footer__share a {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: var(--transition-general);
+}
+
+.l-footer__share a:hover {
+    color: var(--text-color-green);
+    transform: translateY(-8px);
 }
 
 /* ================== Media queries ================== */
